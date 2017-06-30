@@ -4,15 +4,16 @@ var CarLot = (function (globalScopeCarLot) {
 let DOMhelper = Object.create(null);
 let outputDiv = document.getElementById("output");
 let counter = 1;
-
+let outputString ="";
 //data variable contains the cars array of objects (_car_inventory.cars)
 DOMhelper.outputData = function(data){
 	console.log ("data",data);
 	data.forEach(function(item){
-		let carDiv= document.createElement("div");
-		carDiv.innerHTML+=
-		`<row>
-			<div class="car-container card col-md-4" id="car-${counter}" value="${counter}">
+		if((counter+2) % 3 ===0) {
+			console.log ("count", counter ,counter % 3);
+			outputString+=`<div class="row">`
+		}
+		outputString+= `<div class="car-container card col-md-4" id="car-${counter}" value="${counter}">
 				<h2>Car make:${item.make}</h2>
 				<h2>Car model:${item.model}</h2>
 				<h3>Year:${item.year}</h3>
@@ -20,12 +21,13 @@ DOMhelper.outputData = function(data){
 				<h4>Description:${item.description}
 					<div id="desc-${counter}"></div>
 				</h4>
-			</div><!--end of car-container-->
-		</row>`
-		outputDiv.appendChild(carDiv);
+			</div><!--end of car-container-->`
+		if(counter % 3 ===0){
+			outputString+=`</div>`;
+		}
 		counter++;
 	});
-
+outputDiv.innerHTML=outputString;
 }
 
 globalScopeCarLot.DOMhelper = DOMhelper;

@@ -23,6 +23,13 @@
       "year": "1995",
       "price": "999",
       "description": "An indestructable gem.  This cherry-red pickup truck may be a veteran of the roads, but still runs like the day it was rolled off the factory line.  One owner, babied from the start, and ready to come home with you! "
+    },
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
     }
 
   ]
