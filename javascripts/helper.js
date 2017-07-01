@@ -31,8 +31,7 @@ function getText(){
 function removeClass(){
   let clickedCard= document.getElementsByClassName("clicked");
   for(var j=0; j<clickedCard.length; j++){
-   clickedCard[j].classList.remove("clicked");
-
+   		clickedCard[j].classList.remove("clicked");
   }//function to remove classes
 }
 
@@ -76,8 +75,8 @@ textarea.addEventListener("keyup", function(event){
 	if (event.key==="Enter"){
 		clearInput();
 	}else{
-	mirror();
-	console.log ("clicked",clickedCard[0].childNodes);
+		mirror();
+		console.log ("clicked",clickedCard[0].childNodes);
 	}
 });
 
