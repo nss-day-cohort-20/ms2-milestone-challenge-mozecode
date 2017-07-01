@@ -28,26 +28,6 @@ var CarLot = (function (globalScopeCarLot) {
   });
 
 
-// var CarLot = (function (globalScopeCarLot) {
-
-//   // Define a private scope variable to store cars
-//   let _car_inventory = [];
-
-//   // Start building the Object that will be attached
-//   // to the CarLot.Inventory namespace
-//   let inventory = Object.create(null);
-//     inventory.loadInventory= function (outputData) {
-//       var load = new XMLHttpRequest();
-//       load.open("GET", "inventory.json");
-//       load.send();
-//       load.addEventListener("load", function (event) {
-//        _car_inventory = JSON.parse(event.target.responseText);
-//        console.log ("event",event);
-//        console.log ("_car_inventory",_car_inventory);
-//        DOMhelper.outputData(_car_inventory.cars);
-//       });
-//     }
-
   globalScopeCarLot.Inventory = inventory;
   return globalScopeCarLot;
 

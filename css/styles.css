@@ -6,6 +6,10 @@ body {
 
 .card{
 	border: 1px solid black;
+	min-height:400px;
+	width:30%;
+	margin:1.5%;
+	box-shadow:5px 5px 5px darkgray;
 }
 
 .clicked{
